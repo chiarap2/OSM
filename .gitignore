@@ -1,3 +1,3 @@
 /cache
 /pois_mapped_manhattan.parquet
-__pycache__/
+osmnx_poi_mapper/__pycache__/
