@@ -1,2 +1,3 @@
 /cache
 /pois_mapped_manhattan.parquet
+__pycache__/
