@@ -1,0 +1,13 @@
+{
+    "place_name": "Washington, USA",
+    "poi_tags": {
+        "amenity": ["bar", "restaurant", "cafe", "pub", "nightclub", "fast_food", "food_court", "ice_cream", "biergarten", "college", "university", "school", "kindergarten", "library", "arts_centre", "cinema", "theatre", "bank", "clinic", "hospital", "pharmacy", "place_of_worship"],
+        "historic": ["castle", "church"],
+        "leisure": ["park", "playground", "sports_centre", 
+        "stadium", "swimming_pool", "fitness_centre", "golf_course", 
+        "marina", "water_park", "track", "pitch", "recreation_ground", 
+        "ice_rink", "miniature_golf", "nature_reserve", "dog_park", "garden", 
+        "common", "dance", "fitness_station", "fishing", "horse_riding"],
+        "public_transport": ["station", "stop_position", "platform", "stop_area", "stop_area_group"]
+        }
+}

@@ -2,3 +2,4 @@
 /pois_mapped_manhattan.parquet
 osmnx_poi_mapper/__pycache__/
 pois_mapped_washington.parquet
+osmnx_poi_mapper/__pycache__/mapper.cpython-312.pyc

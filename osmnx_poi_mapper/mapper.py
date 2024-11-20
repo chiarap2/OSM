@@ -13,35 +13,23 @@ def read_categories(path: str) -> dict:
     
     Returns:
     - dict: A dictionary with categories grouped by super-category.
-    """ 
-
+    """
     tags = {}
 
-    with open(path) as f:
-
+    with open(path, 'r') as f:
         lines = f.readlines()
-
-        tag = ""
-
+        
         for line in lines:
-
-            super_category = re.findall(r".*=",line)
-            super_category = super_category[0][0:-1]
-
-            category = re.findall(r"=.*;",line)
-            category = category[0][1:-1]
-
-            if tag == super_category:
-
-                tags[tag].append(category)
-
-            else:
-                
-                tag = super_category
-                tags[tag] = []
-                tags[tag].append(category)
+            # Extract the super-category and category
+            match = re.match(r"(.+?)=(.+?);category:(.+)", line.strip())
+            if match:
+                key, value, super_category = match.groups()
+                if super_category not in tags:
+                    tags[super_category] = []
+                tags[super_category].append(value)
 
     return tags
+
 
 
 def map_poi_categories(poi_gdf: gpd.GeoDataFrame, category_dict: dict, tags: dict) -> gpd.GeoDataFrame:
